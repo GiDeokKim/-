@@ -52,8 +52,6 @@ namespace PhysicsGD
 		return Vector3(x - _vector.x, y - _vector.y, z - _vector.z);
 	}
 
-
-
 	void Vector3::invert()
 	{
 		x = -x;
@@ -68,6 +66,13 @@ namespace PhysicsGD
 			(*this) *= ((real)1) / vectorlen;
 	}
 
+	void Vector3::addScaledVector(const Vector3& _vector, real scale)
+	{
+		x += _vector.x * scale;
+		y += _vector.y * scale;
+		z += _vector.z * scale;
+	}
+
 	real Vector3::magnitude()
 	{
 		return sqrt(x * x + y * y + z * z);
@@ -78,4 +83,5 @@ namespace PhysicsGD
 		return x * x + y * y + z * z;
 	}
 	
+
 }

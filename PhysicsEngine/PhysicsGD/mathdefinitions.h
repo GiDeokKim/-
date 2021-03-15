@@ -28,10 +28,12 @@ namespace PhysicsGD
 		Vector3 operator-(const Vector3& _vector);	//	주어진 vector만큼 뺀 vector를 return
 
 	public:
-		void invert();							//	모든 원소의 부호를 반대로 변경
-		void normalize();						//	zero vector가 아닌 vector를 unit vector로 변환
-		real magnitude();						//	vector의 크기를 계산
-		real SquareMagnitude();					//	vector의 크기의 제곱을 계산
+		void invert();									//	모든 원소의 부호를 반대로 변경
+		void normalize();								//	zero vector가 아닌 vector를 unit vector로 변환
+		void addScaledVector(const Vector3& _vector,
+							real scale);				//	주어진 vector를 주어진 scalar value만큼 곱한 다음 vector에 더해준다.
+		real magnitude();								//	vector의 크기를 계산
+		real SquareMagnitude();							//	vector의 크기의 제곱을 계산
 
 	};
 }
