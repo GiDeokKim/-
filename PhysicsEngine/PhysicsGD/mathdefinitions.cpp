@@ -83,5 +83,15 @@ namespace PhysicsGD
 		return x * x + y * y + z * z;
 	}
 	
+	Vector3	Vector3::componentProduct(const Vector3& _vector)
+	{
+		return Vector3(x * _vector.x, y * _vector.y, z * *_vector.z);
+	}
 
+	void Vector3::componentProductUpdate(const Vector3& _vector)
+	{
+		x *= _vector.x;
+		y *= _vector.y;
+		z *= _vector.z;
+	}
 }
