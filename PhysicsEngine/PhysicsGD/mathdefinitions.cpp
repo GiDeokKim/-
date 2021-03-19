@@ -94,4 +94,9 @@ namespace PhysicsGD
 		y *= _vector.y;
 		z *= _vector.z;
 	}
+
+	real Vector3::InnerProduct(const Vector3& _vector)
+	{
+		return x * _vector.x + y * _vector.y + z * _vector.z;
+	}
 }

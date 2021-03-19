@@ -35,6 +35,7 @@ namespace PhysicsGD
 									real scale);					//	주어진 vector를 주어진 scalar value만큼 곱한 다음 vector에 더해준다.
 		real		magnitude();									//	vector의 크기를 계산
 		real		SquareMagnitude();								//	vector의 크기의 제곱을 계산
+		real		InnerProduct(const Vector3& _vector);			//	vector 내적 계산
 		Vector3		componentProduct(const Vector3& _vector);		//	대상 vector에 주어진 vector와의 성분 간 곱셈을 하여 return
 		void		componentProductUpdate(const Vector3& _vector);	//	주어진 vector의 성분을 대상 vector의 각 성분에 곱
 	};
