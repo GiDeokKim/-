@@ -99,4 +99,20 @@ namespace PhysicsGD
 	{
 		return x * _vector.x + y * _vector.y + z * _vector.z;
 	}
+
+	Vector3 Vector3::crossProduct(const Vector3& _vector)
+	{
+		return Vector3(y * _vector.z - z * _vector.y,
+					z * _vector.x - x * _vector.z,
+					x * _vector.y - y * _vector.x);
+	}
+
+	void Vector3::makeOrthonormalBasis(Vector3* a, Vector3* b, Vector3* c)
+	{
+		a->normalize();
+		(*c) = a->crossProduct(b);
+		if (c->SquareMagnitude() == 0) return;	//	vector a와 vector b가 평행
+		c->normalize();
+		(*b) = c->crossProduct(a);
+	}
 }

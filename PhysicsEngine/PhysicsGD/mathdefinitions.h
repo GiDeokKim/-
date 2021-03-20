@@ -38,5 +38,8 @@ namespace PhysicsGD
 		real		InnerProduct(const Vector3& _vector);			//	vector 내적 계산
 		Vector3		componentProduct(const Vector3& _vector);		//	대상 vector에 주어진 vector와의 성분 간 곱셈을 하여 return
 		void		componentProductUpdate(const Vector3& _vector);	//	주어진 vector의 성분을 대상 vector의 각 성분에 곱
+		Vector3		crossProduct(const Vector3& _vector);			//	벡터곱 계산
+
+		void		makeOrthonormalBasis(Vector3* a, Vector3* b, Vector3* c);	//	정규직교 기저 구하기
 	};
 }
