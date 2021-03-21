@@ -16,6 +16,30 @@ namespace PhysicsGD
 		z = z_entry;
 	}
 
+	void Vector3::operator+=(const Vector3& _vector)
+	{
+		x += _vector.x;
+		y += _vector.y;
+		z += _vector.z;
+	}
+
+	Vector3 Vector3::operator+(const Vector3& _vector) const
+	{
+		return Vector3(x + _vector.x, y + _vector.y, z + _vector.z);
+	}
+
+	void Vector3::operator-=(const Vector3& _vector)
+	{
+		x -= _vector.x;
+		y -= _vector.y;
+		z -= _vector.z;
+	}
+
+	Vector3 Vector3::operator-(const Vector3& _vector) const
+	{
+		return Vector3(x - _vector.x, y - _vector.y, z - _vector.z);
+	}
+
 	void Vector3::operator*=(const real _value)
 	{
 		x *= _value;
@@ -23,33 +47,9 @@ namespace PhysicsGD
 		z *= _value;
 	}
 
-	Vector3 Vector3::operator*(const real _value)
+	Vector3 Vector3::operator*(const real _value) const
 	{
 		return Vector3(x * _value, y * _value, z * _value);
-	}
-
-	void	Vector3::operator+=(const Vector3& _vector)
-	{
-		x += _vector.x;
-		y += _vector.y;
-		z += _vector.z;
-	}
-
-	Vector3 Vector3::operator+(const Vector3& _vector)
-	{
-		return Vector3(x + _vector.x, y + _vector.y, z + _vector.z);
-	}
-
-	void	Vector3::operator-=(const Vector3& _vector)
-	{
-		x -= _vector.x;
-		y -= _vector.y;
-		z -= _vector.z;
-	}
-
-	Vector3 Vector3::operator-(const Vector3& _vector)
-	{
-		return Vector3(x - _vector.x, y - _vector.y, z - _vector.z);
 	}
 
 	void Vector3::invert()
