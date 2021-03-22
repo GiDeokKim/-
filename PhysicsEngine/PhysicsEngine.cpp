@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 #include "PhysicsGD/mathdefinitions.h"
+#include "PhysicsGD/particle.h"
 
 // 물리 엔진을 만들기 위한 main 코드입니다.
 // 주석은 앞으로 Doxygen 문법에 맞춰서 수정
